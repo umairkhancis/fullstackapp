@@ -1,0 +1,7 @@
+env/
+src/djreact/tests/__pycache__/
+src/djreact/__pycache__/
+src/movies/__pycache__/
+src/movies/api/__pycache__/
+src/movies/migrations/
+src/movies/migrations/__pycache__/
