@@ -9,12 +9,11 @@ class ArticleDetail extends React.Component {
 
     componentDidMount() {
         const articleId = this.props.match.params.articleId;
-        axios.get(`http://127.0.0.1:8000/api/${articleId}`)
+        axios.get(`http://127.0.0.1:8000/api/movie/article/${articleId}`)
             .then(res => {
                 this.setState({
                     article: res.data
                 });
-                console.log(res.data);
             })
     }
 

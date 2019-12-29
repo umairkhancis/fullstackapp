@@ -1,0 +1,5 @@
+language: python
+install:
+    - pip install -r backend/requirements.txt
+script:
+    - cd backend/src && pytest
