@@ -10,7 +10,11 @@ WORKDIR backend
 COPY . .
 
 # Install the dependencies.
+RUN apk update \
+    && apk add --virtual build-deps gcc python3-dev musl-dev \
+    && apk add --no-cache mariadb-dev
 RUN pip install -r requirements.txt
+RUN apk del build-deps
 
 # Use a new user to use application to avoid using default root user; for security purposes.
 RUN adduser -D appuser
@@ -18,4 +22,3 @@ USER appuser
 
 # Switch to src directory and start server.
 WORKDIR src
-CMD python manage.py runserver 0.0.0.0:8000
