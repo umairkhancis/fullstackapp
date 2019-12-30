@@ -9,7 +9,9 @@ Full stack app in python django-rest-framework and react js.
 - Redis Banner - Visualization for redis.
 
 ## Run in docker
+```python
 $ docker-compose up --build
+```
 
 ## Urls
 - [Django Template based LPV Page](http://localhost:8000/movie/lpv/)
